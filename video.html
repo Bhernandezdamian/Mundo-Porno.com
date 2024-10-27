@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título del Video</title>
+    
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="player">
+    <meta name="twitter:site" content="@tu_usuario"> <!-- Cambia esto por tu nombre de usuario de Twitter -->
+    <meta name="twitter:title" content="Título del Video">
+    <meta name="twitter:description" content="Descripción breve del video">
+    <meta name="twitter:image" content="URL_de_la_imagen_de_previsualización"> <!-- Cambia esto por la URL de una imagen que quieras mostrar -->
+    <meta name="twitter:player" content="https://tu-sitio-web.com/player.html"> <!-- Cambia esto por la URL de tu reproductor HTML -->
+    <meta name="twitter:player:width" content="640">
+    <meta name="twitter:player:height" content="360">
+    <meta name="twitter:player:stream" content="https://firebasestorage.googleapis.com/v0/b/chat-0-c9ef9.appspot.com/o/videos%20x%2F14131591-480p.mp4?alt=media&token=50d3efe1-28c8-467a-a2eb-18259b840e54">
+
+    <!-- Estilos -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 30px;
+        }
+
+        /* Media query para pantallas pequeñas */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        /* Estilo del reproductor de video */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Bienvenido a mi video!</h1>
+    <p>Este es un video almacenado en Firebase.</p>
+    
+    <!-- Contenedor del video -->
+    <div class="video-container">
+        <video controls autoplay muted> <!-- Reproducción automática y silenciada -->
+            <source src="https://firebasestorage.googleapis.com/v0/b/chat-0-c9ef9.appspot.com/o/videos%20x%2F14131591-480p.mp4?alt=media&token=50d3efe1-28c8-467a-a2eb-18259b840e54" type="video/mp4">
+            Tu navegador no soporta video HTML5.
+        </video>
+    </div>
+    
+    <!-- Enlace para ver el video directamente -->
+    <a href="https://firebasestorage.googleapis.com/v0/b/chat-0-c9ef9.appspot.com/o/videos%20x%2F14131591-480p.mp4?alt=media&token=50d3efe1-28c8-467a-a2eb-18259b840e54" target="_blank">
+        Ver el Video
+    </a>
+</body>
+</html>
